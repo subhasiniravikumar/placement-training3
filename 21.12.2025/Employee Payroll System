@@ -1,0 +1,10 @@
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def calculate_salary(self):
+        return self.salary - (self.salary * 0.1)
+
+emp = Employee("Kumar", 30000)
+print("Net Salary:", emp.calculate_salary())
