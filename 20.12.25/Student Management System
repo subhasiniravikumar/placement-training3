@@ -1,0 +1,12 @@
+students = {}
+
+def add_student(roll, name, marks):
+    students[roll] = {"Name": name, "Marks": marks}
+
+def display_students():
+    for roll, details in students.items():
+        print(roll, details)
+
+add_student(1, "Arun", 85)
+add_student(2, "Bala", 90)
+display_students()
