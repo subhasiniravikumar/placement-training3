@@ -1,0 +1,14 @@
+library = []
+
+def add_book(book):
+    library.append(book)
+
+def search_book(book):
+    if book in library:
+        print("Book Available")
+    else:
+        print("Book Not Found")
+
+add_book("Python")
+add_book("AI")
+search_book("Python")
