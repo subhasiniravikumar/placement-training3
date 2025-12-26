@@ -1,0 +1,16 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        FileInputStream fin = new FileInputStream("a.txt");
+        FileOutputStream fout = new FileOutputStream("b.txt");
+
+        int ch;
+        while ((ch = fin.read()) != -1)
+            fout.write(ch);
+
+        fin.close();
+        fout.close();
+        System.out.println("File Copied");
+    }
+}
