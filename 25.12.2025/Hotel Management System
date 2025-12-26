@@ -1,0 +1,26 @@
+class Hotel {
+    String roomType;
+    double price;
+    boolean booked = false;
+
+    Hotel(String roomType, double price) {
+        this.roomType = roomType;
+        this.price = price;
+    }
+
+    void bookRoom() {
+        if (!booked) {
+            booked = true;
+            System.out.println(roomType + " booked. Price: " + price);
+        } else {
+            System.out.println(roomType + " already booked");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Hotel h = new Hotel("Deluxe", 3000);
+        h.bookRoom();
+    }
+}
