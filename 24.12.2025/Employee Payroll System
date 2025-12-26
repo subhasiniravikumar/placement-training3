@@ -1,0 +1,22 @@
+class Employee {
+    int id;
+    String name;
+    double salary;
+
+    Employee(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    double calculateNetSalary() {
+        return salary - (salary * 0.1); // 10% tax
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e = new Employee(1, "Karthi", 50000);
+        System.out.println("Net Salary: " + e.calculateNetSalary());
+    }
+}
