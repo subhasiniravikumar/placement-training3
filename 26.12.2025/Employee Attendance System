@@ -1,0 +1,11 @@
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, String> attendance = new HashMap<>();
+        attendance.put("Ravi", "Present");
+        attendance.put("Anu", "Absent");
+
+        System.out.println(attendance);
+    }
+}
