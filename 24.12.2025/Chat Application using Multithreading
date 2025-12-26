@@ -1,0 +1,18 @@
+class Chat extends Thread {
+    String msg;
+
+    Chat(String msg) {
+        this.msg = msg;
+    }
+
+    public void run() {
+        System.out.println(msg);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        new Chat("Hello").start();
+        new Chat("How are you?").start();
+    }
+}
