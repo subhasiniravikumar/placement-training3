@@ -1,0 +1,20 @@
+class Ticket {
+    int seats = 5;
+
+    synchronized void bookSeat() {
+        if (seats > 0) {
+            seats--;
+            System.out.println("Seat booked. Remaining: " + seats);
+        } else {
+            System.out.println("No seats available");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Ticket t = new Ticket();
+        t.bookSeat();
+        t.bookSeat();
+    }
+}
