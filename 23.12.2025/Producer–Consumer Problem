@@ -1,0 +1,25 @@
+class Data {
+    int value;
+    boolean available = false;
+
+    synchronized void produce(int v) {
+        if (available) return;
+        value = v;
+        available = true;
+        System.out.println("Produced: " + v);
+    }
+
+    synchronized void consume() {
+        if (!available) return;
+        System.out.println("Consumed: " + value);
+        available = false;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Data d = new Data();
+        d.produce(100);
+        d.consume();
+    }
+}
