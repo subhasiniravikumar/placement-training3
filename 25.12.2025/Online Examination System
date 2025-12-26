@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int score = 0;
+
+        System.out.println("Java is OOP language? (yes/no)");
+        String ans = sc.next();
+
+        if (ans.equalsIgnoreCase("yes"))
+            score++;
+
+        System.out.println("Score: " + score + "/1");
+    }
+}
