@@ -1,0 +1,8 @@
+score = 0
+
+if input("Capital of India? ").lower() == "delhi":
+    score += 1
+if input("2 + 2 = ").strip() == "4":
+    score += 1
+
+print("Score:", score)
