@@ -1,0 +1,6 @@
+n = int(input("Enter limit: "))
+a, b = 0, 1
+print(a, b, end=" ")
+for i in range(n-2):
+    a, b = b, a+b
+    print(b, end=" ")
